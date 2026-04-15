@@ -4,8 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>五一特惠节 · 主会场</title>
-    <script type="module" crossorigin src="/wuyi/assets/index-DWvmmvQP.js"></script>
-    <link rel="stylesheet" crossorigin href="/wuyi/assets/index-DlxBJOHu.css">
+    <!-- 首屏前打上「无手机框」标记，避免闪一下框；逻辑与 src/mobileFullPage.ts 同步 -->
+    <script>
+      (function () {
+        function sync() {
+          var w = Math.min(
+            window.innerWidth,
+            document.documentElement && document.documentElement.clientWidth
+              ? document.documentElement.clientWidth
+              : window.innerWidth,
+          );
+          var ua = navigator.userAgent || "";
+          var looksMobile =
+            /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(
+              ua,
+            ) || /\biPad\b/i.test(ua);
+          var full = w <= 1200 || (looksMobile && w < 2000);
+          document.documentElement.classList.toggle("mobile-full-page", full);
+        }
+        sync();
+        window.addEventListener("resize", sync, { passive: true });
+        window.addEventListener("orientationchange", sync, { passive: true });
+        if (window.visualViewport) {
+          window.visualViewport.addEventListener("resize", sync, {
+            passive: true,
+          });
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/wuyi/assets/index-DKoc1Qmk.js"></script>
+    <link rel="stylesheet" crossorigin href="/wuyi/assets/index-3z-GlI6u.css">
   </head>
   <body>
     <div id="root"></div>
