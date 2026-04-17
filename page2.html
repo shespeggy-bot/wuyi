@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=375, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>券包状态 — Figma 0:57</title>
+<style>
+/*
+  Figma「券包状态」Frame 0:57：整帧 PNG 切图，375 逻辑宽等比展示。
+  assets/frame_0_57.png：1500×2864（画板 750 宽 @2×）
+*/
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { background: #2c2c2e; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
+  background: #2c2c2e;
+  width: 375px;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 716px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+main { width: 100%; line-height: 0; }
+
+.page-slice {
+  display: block;
+  width: 375px;
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+  margin: 0 auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.hint {
+  font-size: 12px;
+  color: #a1a1a6;
+  padding: 16px;
+  line-height: 1.5;
+  display: none;
+}
+.page-slice[data-missing="1"] ~ .hint { display: block; }
+.page-slice[data-missing="1"] {
+  min-height: 200px;
+  background: repeating-linear-gradient(45deg, #3a3a3c, #3a3a3c 10px, #2c2c2e 10px, #2c2c2e 20px);
+}
+</style>
+</head>
+<body>
+
+<main>
+  <img
+    id="slice"
+    class="page-slice"
+    src="assets/frame_0_57.png"
+    alt="券包状态"
+    width="1500"
+    height="2864"
+    decoding="async"
+  />
+  <p class="hint">未加载到切图：请将 Figma Frame「券包状态」(0:57) 导出为 PNG，保存为 <code>assets/frame_0_57.png</code>（建议 2×，宽 1500）。</p>
+</main>
+
+<script>
+(function () {
+  var img = document.getElementById('slice');
+  function mark() { img.setAttribute('data-missing', '1'); }
+  img.addEventListener('error', mark);
+  if (img.complete && img.naturalWidth === 0) mark();
+})();
+</script>
+
+</body>
+</html>

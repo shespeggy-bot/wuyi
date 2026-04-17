@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=375, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>品牌推荐</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { background: #2c2c2e; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+  background: #2c2c2e;
+  width: 375px;
+  margin: 0 auto;
+  height: 716px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+}
+
+.frame {
+  padding: 35px 10px 35px;
+}
+
+.brand-card {
+  width: 355px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.brand-card .header img {
+  display: block;
+  width: 355px;
+  height: auto;
+}
+
+.brand-card .products-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0 0 0 12px;
+}
+.brand-card .products-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.brand-card .products-row {
+  display: flex;
+  gap: 8px;
+  padding-right: 12px;
+  width: max-content;
+}
+
+.brand-card .product-item {
+  flex-shrink: 0;
+  width: 108px;
+}
+.brand-card .product-item img {
+  display: block;
+  width: 108px;
+  height: auto;
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+  <div class="brand-card">
+    <div class="header">
+      <img src="assets/brand_header.png" alt="海底捞 12:40:21 后过期" width="1420" height="170">
+    </div>
+    <div class="products-scroll">
+      <div class="products-row">
+        <div class="product-item">
+          <img src="assets/brand_pcard_1.png" alt="达美乐 ¥87" width="430" height="492">
+        </div>
+        <div class="product-item">
+          <img src="assets/brand_pcard_2.png" alt="肥牛 ¥87" width="430" height="492">
+        </div>
+        <div class="product-item">
+          <img src="assets/brand_pcard_3.png" alt="成长值 ¥87" width="430" height="492">
+        </div>
+        <div class="product-item">
+          <img src="assets/brand_pcard_4.png" alt="达美乐 ¥87" width="430" height="492">
+        </div>
+        <div class="product-item">
+          <img src="assets/brand_pcard_5.png" alt="肥牛 ¥87" width="430" height="492">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

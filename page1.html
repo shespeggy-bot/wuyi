@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=375, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>主会场 — Figma 0:2</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { background: #2c2c2e; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
+  background: #2c2c2e;
+  width: 375px;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 716px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+.scroll-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  line-height: 0;
+}
+
+.scroll-content img {
+  display: block;
+  width: 375px;
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.tabbar {
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.tabbar img {
+  display: block;
+  width: 375px;
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+</style>
+</head>
+<body>
+
+<div class="scroll-content">
+  <img src="assets/page1_content.png" alt="五一特惠节 主会场" width="1500" height="5028" decoding="async" fetchpriority="high">
+</div>
+
+<div class="tabbar">
+  <img src="assets/page1_tabbar.png" alt="底部导航" width="1500" height="368" decoding="async">
+</div>
+
+</body>
+</html>
