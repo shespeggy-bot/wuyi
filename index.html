@@ -50,6 +50,11 @@ body {
   background: rgba(255, 255, 255, 0.08);
 }
 
+/* 缩放容器 */
+.tri-wrapper {
+  overflow: hidden;
+}
+
 /* 左 · 中 · 右 三列 */
 .tri {
   display: flex;
@@ -58,8 +63,9 @@ body {
   gap: 12px;
   padding: 12px;
   width: max(100%, 900px);
-  margin: 0 auto;
   min-height: calc(100vh - 52px);
+  transform: scale(0.6);
+  transform-origin: top center;
 }
 
 .col {
@@ -143,6 +149,7 @@ body {
   <a href="#" data-col="2" role="button">右 · 品牌</a>
 </nav>
 
+<div class="tri-wrapper" id="tri-wrapper">
 <div class="tri" id="tri">
   <!-- 主会场：page1_content + page1_tabbar（底栏吸底） -->
   <section class="col col-main" id="sec-main">
@@ -162,6 +169,7 @@ body {
     <p class="sec-title">品牌推荐 · 0:73</p>
     <img class="slice" src="assets/frame_0_73.png" alt="品牌推荐" width="1500" height="940" decoding="async">
   </section>
+</div>
 </div>
 
 <script>
@@ -204,6 +212,20 @@ body {
   document.querySelectorAll('#sec-main .slice, #sec-main .main-tabbar img').forEach(function (img) {
     if (!img.complete) img.addEventListener('load', syncMainColumnHeight);
   });
+
+  /* 缩放后修正容器高度，避免底部大片空白 */
+  function syncWrapperHeight() {
+    var tri = document.getElementById('tri');
+    var wrapper = document.getElementById('tri-wrapper');
+    if (!tri || !wrapper) return;
+    wrapper.style.height = (tri.offsetHeight * 0.6) + 'px';
+  }
+
+  window.addEventListener('load', syncWrapperHeight);
+  window.addEventListener('resize', syncWrapperHeight);
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncWrapperHeight).observe(document.getElementById('tri'));
+  }
 })();
 </script>
 
